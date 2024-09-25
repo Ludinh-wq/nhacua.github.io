@@ -3,24 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang nội bộ</title>
+    <title>Dự Án Bất Động Sản</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
-        h1 { color: #333; }
-        .content { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        .reminder { color: #555; font-size: 14px; }
-        img { max-width: 100%; height: auto; }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        header { background-color: #003366; color: white; padding: 20px; text-align: center; }
+        h1 { margin: 0; }
+        nav { text-align: center; padding: 10px; background-color: #003366; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .section { padding: 20px; }
+        .projects, .facilities { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .projects img, .facilities img { width: 300px; border-radius: 10px; margin-bottom: 20px; }
+        footer { background-color: #003366; color: white; text-align: center; padding: 10px; }
+        .contact-form { background-color: #fff; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; }
+        iframe { width: 100%; height: 300px; border: 0; }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Chào mừng đến với trang nội bộ</h1>
-        <p>Đây là nơi lưu trữ thông tin, hình ảnh và các nhắc nhở của bạn.</p>
-        <h2>Nhắc nhở</h2>
-        <p class="reminder">- Cuộc họp lúc 9h sáng mai.</p>
-        <p class="reminder">- Nộp báo cáo vào thứ 6 tuần này.</p>
-        <h2>Hình ảnh</h2>
-        <img src="https://via.placeholder.com/300" alt="Mẫu hình ảnh">
+
+<header>
+    <h1>Dự Án Bất Động Sản Cao Cấp</h1>
+</header>
+
+<nav>
+    <a href="#home">Trang chủ</a>
+    <a href="#projects">Hình ảnh</a>
+    <a href="#facilities">Tiện ích</a>
+    <a href="#contact">Liên hệ</a>
+</nav>
+
+<section id="home" class="section">
+    <h2>Giới thiệu dự án</h2>
+    <p>Dự án bất động sản cao cấp nằm tại vị trí vàng của thành phố, với các tiện ích hiện đại và không gian sống đẳng cấp.</p>
+</section>
+
+<section id="projects" class="section projects">
+    <h2>Hình ảnh dự án</h2>
+    <img src="https://via.placeholder.com/300" alt="Hình ảnh dự án 1">
+    <img src="https://via.placeholder.com/300" alt="Hình ảnh dự án 2">
+    <img src="https://via.placeholder.com/300" alt="Hình ảnh dự án 3">
+</section>
+
+<section id="facilities" class="section facilities">
+    <h2>Tiện ích hiện đại</h2>
+    <img src="https://via.placeholder.com/300" alt="Bể bơi">
+    <img src="https://via.placeholder.com/300" alt="Phòng gym">
+    <img src="https://via.placeholder.com/300" alt="Công viên xanh">
+</section>
+
+<section id="contact" class="section">
+    <h2>Liên hệ</h2>
+    <div class="contact-form">
+        <form action="https://example.com/contact" method="POST">
+            <input type="text" name="name" placeholder="Họ và tên" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Tin nhắn" required></textarea>
+            <input type="submit" value="Gửi">
+        </form>
     </div>
+</section>
+
+<section class="section">
+    <h2>Bản đồ dự án</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.836969581319!2d105.79858191533153!3d21.03929788599354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab8c32a9496f%3A0x6c1b3912fa58d14!2zQ-G6o25nIGzhu6NpIFTDom4gSOG7kyBuw7RuIE5ndXnDqm4gVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1630593284777!5m2!1svi!2s"></iframe>
+</section>
+
+<footer>
+    <p>&copy; 2024 Dự Án Bất Động Sản Cao Cấp. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
