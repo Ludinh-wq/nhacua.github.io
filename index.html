@@ -1,88 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Management</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Trang nội bộ</title>
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .alert {
-            display: none;
-        }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        h1 { color: #333; }
+        .content { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .reminder { color: #555; font-size: 14px; }
+        img { max-width: 100%; height: auto; }
     </style>
-    <script>
-        function showAlert(message, type) {
-            var alertBox = document.getElementById('alert');
-            alertBox.className = 'alert alert-' + type;
-            alertBox.innerText = message;
-            alertBox.style.display = 'block';
-        }
-    </script>
 </head>
 <body>
-
-<div class="container">
-    <h1 class="text-center">Real Estate Management</h1>
-    <div id="alert" class="alert" role="alert"></div>
-
-    <form id="propertyForm" method="POST" enctype="multipart/form-data" action="/upload">
-        <div class="form-group">
-            <label for="name">Property Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" name="description" required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="image">Upload Image (JPG, JPEG, PDF)</label>
-            <input type="file" class="form-control-file" id="image" name="image" accept=".jpg, .jpeg, .pdf" required>
-        </div>
-        <div class="form-group">
-            <label for="reminder">Set a Reminder (Optional)</label>
-            <input type="datetime-local" class="form-control" id="reminder" name="reminder">
-        </div>
-        <button type="submit" class="btn btn-primary">Upload</button>
-    </form>
-
-    <h2 class="mt-5">Uploaded Properties</h2>
-    <ul id="propertyList" class="list-group"></ul>
-</div>
-
-<script>
-    // Mock function to simulate a successful upload
-    document.getElementById('propertyForm').onsubmit = function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        var name = document.getElementById('name').value;
-        var description = document.getElementById('description').value;
-        var image = document.getElementById('image').files[0];
-        var reminder = document.getElementById('reminder').value;
-
-        if (name && description && image) {
-            // Here you would typically send the data to your server
-            // For this example, we simply add it to the list
-
-            var listItem = document.createElement('li');
-            listItem.className = 'list-group-item';
-            listItem.textContent = name + ': ' + description + (reminder ? ' - Reminder set for ' + reminder : '');
-            document.getElementById('propertyList').appendChild(listItem);
-
-            showAlert('Property uploaded successfully!', 'success');
-
-            // Reset the form
-            document.getElementById('propertyForm').reset();
-        } else {
-            showAlert('Please fill in all fields!', 'danger');
-        }
-    };
-</script>
-
+    <div class="content">
+        <h1>Chào mừng đến với trang nội bộ</h1>
+        <p>Đây là nơi lưu trữ thông tin, hình ảnh và các nhắc nhở của bạn.</p>
+        <h2>Nhắc nhở</h2>
+        <p class="reminder">- Cuộc họp lúc 9h sáng mai.</p>
+        <p class="reminder">- Nộp báo cáo vào thứ 6 tuần này.</p>
+        <h2>Hình ảnh</h2>
+        <img src="https://via.placeholder.com/300" alt="Mẫu hình ảnh">
+    </div>
 </body>
 </html>
